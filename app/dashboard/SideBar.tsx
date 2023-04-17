@@ -43,10 +43,10 @@ const dashboardMenu = [
 const SideBar = () => {
   return (
     <>
-      <div className="w-fit">
+      <div className="w-fit ">
         <Sidebar aria-label="Default sidebar example">
           <Sidebar.Items>
-            <h1 className="text-lg font-bold text-center my-5">
+            <h1 className="text-lg font-bold text-center my-5 ">
               💡 Tryout App
             </h1>
 

@@ -10,7 +10,7 @@ export default function DashboardLayout({
     <>
       <div className="flex gap-2">
         <SideBar />
-        <div className="flex-1 container mx-auto p-10 bg-slate-50 min-h-screen ">
+        <div className="flex-1 container p-10 bg-slate-50 min-h-screen ">
           {children}
         </div>
       </div>
