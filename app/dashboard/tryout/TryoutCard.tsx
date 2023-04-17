@@ -1,6 +1,11 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import { Button, Modal } from "flowbite-react";
 
 const TryoutCard = () => {
+  const [openModal, setOpenModal] = useState<string | undefined>();
+
   return (
     <>
       <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -18,6 +23,7 @@ const TryoutCard = () => {
         <a
           href="#"
           className="inline-flex items-center text-blue-600 hover:underline mr-5"
+          onClick={() => setOpenModal("default")}
         >
           Kerjakan
           <svg
@@ -46,6 +52,43 @@ const TryoutCard = () => {
             <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
           </svg>
         </a>
+
+        <Modal
+          show={openModal === "default"}
+          onClose={() => setOpenModal(undefined)}
+        >
+          <Modal.Header>Peraturan Try Out SKD #1</Modal.Header>
+          <Modal.Body>
+            <div className="space-y-6">
+              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                Labore velit deserunt dolore in dolore officia sint proident
+                consequat reprehenderit eiusmod commodo. Cillum ea anim commodo
+                nisi nisi deserunt nisi duis aute ut eu. Ad dolore et magna enim
+                anim nulla enim do id veniam. Qui reprehenderit ex ullamco non
+                reprehenderit dolore adipisicing pariatur aute proident mollit
+                tempor pariatur. Eu adipisicing eiusmod nulla esse laboris
+                laboris ipsum ullamco commodo fugiat. Laborum ipsum irure
+                commodo pariatur excepteur.
+              </p>
+              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                Non duis ipsum adipisicing veniam laborum enim nulla enim magna
+                amet non ut ad. Qui ad est aliqua id. Do esse laboris velit
+                labore fugiat aliquip incididunt excepteur sint occaecat dolor
+                mollit. Culpa ut anim ea nulla sint. Ad ea qui labore et. Non
+                sit irure incididunt ea laborum minim elit culpa nisi incididunt
+                voluptate id nisi culpa.
+              </p>
+            </div>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={() => setOpenModal(undefined)}>
+              Mulai kerjakan
+            </Button>
+            <Button color="gray" onClick={() => setOpenModal(undefined)}>
+              Batal
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     </>
   );
