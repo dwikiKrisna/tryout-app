@@ -2,10 +2,13 @@ import React from "react";
 
 const TryoutCard = () => {
   return (
-    <div>
+    <>
       <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+          Belum dikerjakan
+        </span>
         <a href="#">
-          <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="my-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
             Tryout SKD #1
           </h5>
         </a>
@@ -44,7 +47,7 @@ const TryoutCard = () => {
           </svg>
         </a>
       </div>
-    </div>
+    </>
   );
 };
 

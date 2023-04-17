@@ -1,21 +1,19 @@
 import React from "react";
+import Link from "next/link";
 
 const Dashboard = () => {
   return (
     <>
-      <div className="mb-5 bg-blue-200 rounded-lg p-3">
+      <div className="mb-5 ">
         <h4 className="text-xl font-bold dark:text-white ">
           Selamat datang Dwiki 👋{" "}
         </h4>
-        <p className="text-sm text-gray-500 dark:text-white mb-3">
-          Ayo segera uji kemampuanmu!
+        <p className="text-md text-gray-500 dark:text-white mb-3">
+          Ayo segera uji kemampuanmu!{" "}
+          <Link className="text-blue-500" href={"/dashboard/tryout"}>
+            klik disini
+          </Link>
         </p>
-        <button
-          type="button"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-        >
-          Pilih Tryout
-        </button>
       </div>
       <h4 className="text-xl font-bold dark:text-white mb-5">Riwayat </h4>
 
