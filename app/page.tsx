@@ -1,3 +1,5 @@
+// import { SignInButton, UserButton } from "@clerk/nextjs";
+// import { SignedIn, SignedOut } from "@clerk/nextjs/app-beta/client";
 export default function Home() {
   return (
     <main>
@@ -80,19 +82,22 @@ export default function Home() {
 
             <div className="flex items-center gap-4">
               <div className="sm:flex sm:gap-4">
-                <a
+                {/* <a
                   className="block rounded-md bg-red-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-red-700"
                   href="/"
                 >
-                  Login
-                </a>
-
-                <a
-                  className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-red-600 transition hover:text-red-600/75 sm:block"
-                  href="/"
-                >
-                  Register
-                </a>
+                  Sign In
+                </a> */}
+                {/* <SignedIn>
+                  <UserButton />
+                </SignedIn> */}
+                {/* <SignedOut>
+                  <SignInButton mode="modal">
+                    <button className="rounded border border-gray-400 px-3 py-0.5">
+                      Sign in
+                    </button>
+                  </SignInButton>
+                </SignedOut> */}
               </div>
 
               <button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
