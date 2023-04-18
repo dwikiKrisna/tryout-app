@@ -18,7 +18,9 @@ const Dashboard = () => {
     <>
       <div className="mb-5 ">
         <h4 className="text-xl font-bold dark:text-white ">
-          Selamat datang {fullName} 👋
+          {/* jika data undefined tidak di tampilkan */}
+          {user?.firstName && `Selamat datang ${fullName} 👋`}
+          {/* Selamat datang {fullName} 👋 */}
         </h4>
         <p className="text-md text-gray-500 dark:text-white mb-3">
           Ayo segera uji kemampuanmu!{" "}
