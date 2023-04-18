@@ -57,9 +57,12 @@ const SideBar = () => {
                   {item.name}
                 </Sidebar.Item>
               ))}
-              <Sidebar.Item icon={HiLogout} onClick={() => signOut()}>
-                Logout
-              </Sidebar.Item>
+              <div className="cursor-pointer">
+                {" "}
+                <Sidebar.Item icon={HiLogout} onClick={() => signOut()}>
+                  <div className="cursor-pointer">Logout</div>
+                </Sidebar.Item>
+              </div>
             </Sidebar.ItemGroup>
           </Sidebar.Items>
         </Sidebar>
