@@ -2,6 +2,7 @@ import { UserButton } from "@clerk/nextjs/app-beta";
 import { SignedIn, SignedOut } from "@clerk/nextjs/app-beta/client";
 
 import SignInBtn from "./components/SignInBtn";
+import Link from "next/link";
 export default function Home() {
   return (
     <main>
@@ -96,12 +97,12 @@ export default function Home() {
 
                 {/* butoon direct to sign-in */}
                 <SignedOut>
-                  <a
+                  <Link
                     className="block rounded-md bg-red-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-red-700"
                     href="/sign-in"
                   >
                     Sign In
-                  </a>
+                  </Link>
                 </SignedOut>
               </div>
 
