@@ -1,5 +1,7 @@
-// import { SignInButton, UserButton } from "@clerk/nextjs";
-// import { SignedIn, SignedOut } from "@clerk/nextjs/app-beta/client";
+import { UserButton } from "@clerk/nextjs/app-beta";
+import { SignedIn, SignedOut } from "@clerk/nextjs/app-beta/client";
+
+import SignInBtn from "./components/SignInBtn";
 export default function Home() {
   return (
     <main>
@@ -88,16 +90,19 @@ export default function Home() {
                 >
                   Sign In
                 </a> */}
-                {/* <SignedIn>
+                <SignedIn>
                   <UserButton />
-                </SignedIn> */}
-                {/* <SignedOut>
-                  <SignInButton mode="modal">
-                    <button className="rounded border border-gray-400 px-3 py-0.5">
-                      Sign in
-                    </button>
-                  </SignInButton>
-                </SignedOut> */}
+                </SignedIn>
+
+                {/* butoon direct to sign-in */}
+                <SignedOut>
+                  <a
+                    className="block rounded-md bg-red-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-red-700"
+                    href="/sign-in"
+                  >
+                    Sign In
+                  </a>
+                </SignedOut>
               </div>
 
               <button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
