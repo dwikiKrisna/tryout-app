@@ -1,26 +1,15 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { useUser } from "@clerk/nextjs";
-import { useRouter } from "next/navigation";
 
 const Dashboard = () => {
-  const { isLoaded, isSignedIn, user } = useUser();
-  const router = useRouter();
-  console.log("user", user?.externalAccounts?.[0], isSignedIn, isLoaded);
-  const fullName = user?.firstName + " " + user?.lastName;
-
-  if (isLoaded && !isSignedIn) {
-    router.push("/sign-in?redirectUrl=/dashboard");
-  }
-
   return (
     <>
       <div className="mb-5 ">
         <h4 className="text-xl font-bold dark:text-white ">
           {/* jika data undefined tidak di tampilkan */}
-          {user?.firstName && `Selamat datang ${fullName} 👋`}
-          {/* Selamat datang {fullName} 👋 */}
+          {/* {user?.firstName && `Selamat datang ${fullName} 👋`} */}
+          Selamat datang alfian 👋
         </h4>
         <p className="text-md text-gray-500 dark:text-white mb-3">
           Ayo segera uji kemampuanmu!{" "}

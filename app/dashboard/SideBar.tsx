@@ -1,6 +1,5 @@
 "use client";
 
-import { useClerk } from "@clerk/nextjs";
 import { Sidebar } from "flowbite-react";
 import Link from "next/link";
 import React from "react";
@@ -37,7 +36,6 @@ const dashboardMenu = [
 ];
 
 const SideBar = () => {
-  const { signOut } = useClerk();
   return (
     <>
       <div className="w-fit ">
@@ -57,12 +55,6 @@ const SideBar = () => {
                   {item.name}
                 </Sidebar.Item>
               ))}
-              <div className="cursor-pointer">
-                {" "}
-                <Sidebar.Item icon={HiLogout} onClick={() => signOut()}>
-                  <div className="cursor-pointer">Logout</div>
-                </Sidebar.Item>
-              </div>
             </Sidebar.ItemGroup>
           </Sidebar.Items>
         </Sidebar>

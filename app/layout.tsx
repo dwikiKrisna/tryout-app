@@ -1,5 +1,5 @@
-import { ClerkProvider } from "@clerk/nextjs/app-beta";
 import "./globals.css";
+import ProvidersWrapper from "./providersWrapper";
 
 export const metadata = {
   title: "Tryout App",
@@ -13,9 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ClerkProvider>
-        <body>{children}</body>
-      </ClerkProvider>
+      <body>
+        <ProvidersWrapper>{children}</ProvidersWrapper>
+      </body>
     </html>
   );
 }
