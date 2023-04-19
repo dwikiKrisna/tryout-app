@@ -1,5 +1,5 @@
 import "./globals.css";
-// import ProviderWrapper from "./ProviderWrapper";
+import ProviderWrapper from "./ProviderWrapper";
 export const metadata = {
   title: "Tryout App",
   description: "A simple app to tryout",
