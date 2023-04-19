@@ -1,5 +1,3 @@
-"use client";
-
 import { Sidebar } from "flowbite-react";
 import Link from "next/link";
 import React from "react";

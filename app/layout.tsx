@@ -1,6 +1,5 @@
 import "./globals.css";
-import ProvidersWrapper from "./providersWrapper";
-
+// import ProviderWrapper from "./ProviderWrapper";
 export const metadata = {
   title: "Tryout App",
   description: "A simple app to tryout",
@@ -13,9 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <ProvidersWrapper>{children}</ProvidersWrapper>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
